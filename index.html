@@ -70,22 +70,25 @@
   .header-sep { width: 1px; height: 26px; background: rgba(0,0,0,0.15); transition: background 300ms ease; }
   header.site.scrolled .header-sep { background: rgba(255,255,255,0.1); }
   .brand-guidance img { height: 36px; width: auto; transition: filter 300ms ease; }
+  header.site.scrolled .brand-guidance img { filter: brightness(0) invert(1); opacity: 0.85; }
   .brand-aws-img { height: 34px; width: auto; mix-blend-mode: multiply; opacity: 0.9; transition: filter 300ms ease, opacity 300ms ease, mix-blend-mode 300ms ease; }
   header.site.scrolled .brand-aws-img { mix-blend-mode: normal; filter: brightness(0) invert(1); opacity: 0.75; }
   .header-cta {
     background: var(--ink); color: var(--paper);
     font-family: "Poppins", sans-serif; font-size: 11.5px; font-weight: 700;
     letter-spacing: 0.07em; text-transform: uppercase;
-    padding: 10px 22px; border-radius: var(--radius);
+    padding: 10px 22px; border-radius: var(--radius); white-space: nowrap; flex-shrink: 0;
     transition: opacity 160ms ease, background 300ms ease, color 300ms ease;
   }
   header.site.scrolled .header-cta { background: var(--yellow); color: var(--ink); }
   .header-cta:hover { opacity: 0.85; }
   @media (max-width: 720px) {
     header.site { height: 60px; }
-    .brand-guidance img { height: 28px; }
-    .brand-aws-img { height: 26px; }
-    .header-cta { font-size: 10px; padding: 9px 16px; }
+    .header-logos { gap: 14px; }
+    .brand-guidance img { height: 24px; }
+    .brand-aws-img { height: 22px; }
+    .header-sep { height: 20px; }
+    .header-cta { font-size: 9.5px; padding: 8px 12px; letter-spacing: 0.04em; }
   }
 
   /* HERO */
